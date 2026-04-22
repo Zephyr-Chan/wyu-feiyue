@@ -1,0 +1,498 @@
+/**
+ * 邑大飞跃手册 - 自定义样式
+ * 品牌色系：五邑大学酒红色
+ */
+
+/* ========================================
+   浅色模式变量
+   ======================================== */
+:root {
+  /* 品牌主色 - 邑大酒红 */
+  --vp-c-brand-1: #8B2346;
+  --vp-c-brand-2: #A83254;
+  --vp-c-brand-3: #6D1B38;
+  --vp-c-brand-soft: rgba(139, 35, 70, 0.14);
+
+  /* 首页 Hero 样式 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #8B2346, #C45C7A);
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(139, 35, 70, 0.2) 10%,
+    rgba(46, 134, 171, 0.2) 90%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+
+  /* 自定义按钮颜色 */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: #8B2346;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: #A83254;
+
+  --vp-button-alt-border: #8B2346;
+  --vp-button-alt-text: #8B2346;
+  --vp-button-alt-bg: transparent;
+  --vp-button-alt-hover-border: #8B2346;
+  --vp-button-alt-hover-text: #fff;
+  --vp-button-alt-hover-bg: #8B2346;
+
+  /* 链接颜色 */
+  --vp-c-text-1: #213547;
+  --vp-c-text-2: #4e5969;
+  --vp-c-text-3: #86909c;
+
+  /* 自定义组件颜色 */
+  --wyu-badge-bg: rgba(139, 35, 70, 0.1);
+  --wyu-badge-text: #8B2346;
+  --wyu-card-border: rgba(139, 35, 70, 0.12);
+  --wyu-card-shadow: 0 2px 12px rgba(139, 35, 70, 0.08);
+  --wyu-timeline-line: rgba(139, 35, 70, 0.2);
+  --wyu-timeline-dot: #8B2346;
+}
+
+/* ========================================
+   深色模式变量
+   ======================================== */
+.dark {
+  /* 品牌主色 - 深色模式调亮 */
+  --vp-c-brand-1: #E8708F;
+  --vp-c-brand-2: #F090A8;
+  --vp-c-brand-3: #C45C7A;
+  --vp-c-brand-soft: rgba(232, 112, 143, 0.16);
+
+  /* 首页 Hero 样式 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #E8708F, #F0C0D0);
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(232, 112, 143, 0.15) 10%,
+    rgba(100, 180, 210, 0.15) 90%
+  );
+
+  /* 自定义按钮颜色 */
+  --vp-button-brand-bg: #E8708F;
+  --vp-button-brand-hover-bg: #F090A8;
+
+  --vp-button-alt-border: #E8708F;
+  --vp-button-alt-text: #E8708F;
+  --vp-button-alt-hover-border: #E8708F;
+  --vp-button-alt-hover-text: #1b1b1f;
+  --vp-button-alt-hover-bg: #E8708F;
+
+  /* 自定义组件颜色 */
+  --wyu-badge-bg: rgba(232, 112, 143, 0.15);
+  --wyu-badge-text: #E8708F;
+  --wyu-card-border: rgba(232, 112, 143, 0.15);
+  --wyu-card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --wyu-timeline-line: rgba(232, 112, 143, 0.25);
+  --wyu-timeline-dot: #E8708F;
+}
+
+/* ========================================
+   评论区样式
+   ======================================== */
+.comment-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.comment-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.comment-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* ========================================
+   邑大徽章样式 (.wyu-badge)
+   ======================================== */
+.wyu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--wyu-badge-text);
+  background-color: var(--wyu-badge-bg);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.wyu-badge:hover {
+  background-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+.wyu-badge--tip {
+  --wyu-badge-bg: rgba(22, 163, 74, 0.1);
+  --wyu-badge-text: #16a34a;
+}
+
+.wyu-badge--warning {
+  --wyu-badge-bg: rgba(234, 179, 8, 0.1);
+  --wyu-badge-text: #ca8a04;
+}
+
+.wyu-badge--danger {
+  --wyu-badge-bg: rgba(220, 38, 38, 0.1);
+  --wyu-badge-text: #dc2626;
+}
+
+/* ========================================
+   邑大卡片样式 (.wyu-card)
+   ======================================== */
+.wyu-card {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--wyu-card-border);
+  border-radius: 12px;
+  background-color: var(--vp-c-bg);
+  box-shadow: var(--wyu-card-shadow);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.wyu-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 20px rgba(139, 35, 70, 0.12);
+  transform: translateY(-2px);
+}
+
+.dark .wyu-card:hover {
+  box-shadow: 0 4px 20px rgba(232, 112, 143, 0.1);
+}
+
+.wyu-card__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.wyu-card__desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+}
+
+.wyu-card__link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.wyu-card__link:hover {
+  color: var(--vp-c-brand-2);
+  text-decoration: underline;
+}
+
+/* ========================================
+   邑大统计样式 (.wyu-stat)
+   ======================================== */
+.wyu-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.wyu-stat__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  line-height: 1.2;
+}
+
+.wyu-stat__label {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+}
+
+.wyu-stat__suffix {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-2);
+}
+
+/* ========================================
+   邑大时间线样式 (.wyu-timeline)
+   ======================================== */
+.wyu-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.wyu-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 2px;
+  height: 100%;
+  background-color: var(--wyu-timeline-line);
+}
+
+.wyu-timeline__item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.wyu-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.wyu-timeline__item::before {
+  content: '';
+  position: absolute;
+  top: 0.35rem;
+  left: -1.65rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--wyu-timeline-dot);
+  border: 2px solid var(--vp-c-bg);
+  box-shadow: 0 0 0 2px var(--wyu-timeline-dot);
+}
+
+.wyu-timeline__time {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.25rem;
+}
+
+.wyu-timeline__content {
+  font-size: 0.95rem;
+  color: var(--vp-c-text-1);
+  line-height: 1.7;
+}
+
+.wyu-timeline__content p {
+  margin: 0;
+}
+
+/* ========================================
+   邑大标签样式 (.wyu-tag)
+   ======================================== */
+.wyu-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  background-color: var(--wyu-badge-bg);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: default;
+  transition: all 0.25s;
+}
+
+.wyu-tag:hover {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+}
+
+.wyu-tag--active {
+  color: #fff;
+  background-color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.wyu-tag--active:hover {
+  background-color: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-2);
+}
+
+/* ========================================
+   响应式适配
+   ======================================== */
+@media (max-width: 768px) {
+  .wyu-card {
+    padding: 1rem 1.15rem;
+  }
+
+  .wyu-stat__value {
+    font-size: 1.5rem;
+  }
+
+  .wyu-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .wyu-timeline__item::before {
+    left: -1.15rem;
+    width: 8px;
+    height: 8px;
+  }
+
+  .comment-section {
+    padding: 1rem;
+  }
+}
+
+/* ========== Enhanced Design System ========== */
+
+/* Animation System */
+:root {
+  --wyu-transition-fast: 150ms ease;
+  --wyu-transition-normal: 300ms ease;
+  --wyu-transition-slow: 500ms ease;
+  --wyu-radius-sm: 4px;
+  --wyu-radius-md: 8px;
+  --wyu-radius-lg: 12px;
+  --wyu-radius-xl: 16px;
+  --wyu-radius-full: 9999px;
+  --wyu-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --wyu-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --wyu-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Card Styles */
+.wyu-card {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--wyu-radius-lg);
+  padding: 20px 24px;
+  transition: all var(--wyu-transition-normal);
+  box-shadow: var(--wyu-shadow-sm);
+}
+
+.wyu-card:hover {
+  box-shadow: var(--wyu-shadow-md);
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+/* Enhanced Badge Styles */
+.wyu-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: var(--wyu-radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--wyu-badge-bg, rgba(139, 35, 70, 0.1));
+  color: var(--wyu-badge-text, var(--vp-c-brand-1));
+  transition: all var(--wyu-transition-fast);
+}
+
+/* Stat Grid */
+.wyu-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+/* School Card Grid */
+.wyu-school-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+/* Info Box (enhanced container) */
+.wyu-info-box {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 var(--wyu-radius-md) var(--wyu-radius-md) 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+}
+
+.wyu-info-box strong {
+  color: var(--vp-c-brand-1);
+}
+
+/* Cost Comparison Table Enhancement */
+.wyu-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.wyu-cost-table th {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.wyu-cost-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.wyu-cost-table tr:hover td {
+  background: var(--vp-c-bg-soft);
+}
+
+/* Page Transition */
+.VPContent {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print Styles */
+@media print {
+  .back-to-top,
+  .reading-progress,
+  .VPNav,
+  .VPSidebar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wyu-badge {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+  }
+
+  .wyu-tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .wyu-stat {
+    padding: 1rem;
+  }
+
+  .wyu-stat__value {
+    font-size: 1.25rem;
+  }
+}
