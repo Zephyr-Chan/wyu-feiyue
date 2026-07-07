@@ -169,8 +169,8 @@ wyu-feiyue/
 
 1. **GitHub PR**（推荐）：Fork 仓库 → 修改/新增 Markdown 文件 → 提交 PR
 2. **在线表单**：填写腾讯文档投稿表单（零技术门槛）
-3. **邮件投稿**：下载模板 → 填写 → 发送至 wyu-feiyue@outlook.com
-4. **微信/QQ**：添加管理员微信或加入 QQ 群提交
+3. **邮件投稿**：下载模板 → 填写 → 发送至 820043928@qq.com
+4. **微信/QQ**：添加管理员微信13318407206提交
 
 详见 [投稿指南](https://wyu-feiyue.com/about/contribute)
 
